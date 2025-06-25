@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      obj1 = new Object();
+      obj2 = obj1;
+
+      //garbage collection method : 1. Mark and Sweep   2. Reference counting
+
+      // we are using reference counting
+
+      obj1 = null; //its of no use and it is out dated
+
+      delete obj1;
+
+      console.log(typeof obj1);
+    </script>
+  </head>
+  <body></body>
+</html>

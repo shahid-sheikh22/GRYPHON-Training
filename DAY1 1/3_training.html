@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shahid</title>
+    <script>
+      var color = "blue";
+
+      // SCA - scope chain augmentation : order in which scope will declare
+      // very first scope is activation object
+      function changeColor() {
+        var anotherColor = "red";
+
+        function swapColor() {
+          var tempColor = anotherColor;
+          anotherColor = color;
+          color = tempColor;
+
+          console.log("I am swap color");
+        }
+        swapColor();
+
+        console.log("I am change color");
+      }
+      changeColor();
+
+      console.log("Color is now " + color);
+    </script>
+  </head>
+  <body></body>
+</html>

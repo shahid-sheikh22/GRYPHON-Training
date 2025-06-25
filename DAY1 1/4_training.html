@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shahid</title>
+    <script>
+      var x = 500;
+      y = x;
+
+      console.log(x); //500
+      console.log(y); //500
+
+      x = 1000;
+      console.log(x); //1000
+      console.log(y); //500
+
+
+      //refer by reference
+      obj1 = new Object();
+      obj1.a = 200;
+      obj2 = obj1;
+
+        console.log(obj1.a)
+        console.log(obj2.a)
+        obj2.b=400;
+        console.log(obj2.b)
+        console.log(obj1.b)
+
+
+
+    </script>
+  </head>
+  <body></body>
+</html>

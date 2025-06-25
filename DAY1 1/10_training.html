@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //   var name = "The window";
+
+      //   var object = {
+      //     name: "My Object",
+
+      //     getNameFunc: function () {
+
+      //         return function () {
+      //         //one function inside other function is closure
+      //         return this.name;
+      //       };
+      //     },
+      //   };
+      //   console.log(object.getNameFunc()()); //window
+
+   /*  
+   
+   var name = "The window";
+
+      var object = {
+        name: "My object",
+
+        getNameFunc: function () {
+          var x = this; //use of this keyword is relative reference and x is absolute reference
+          return function () {
+            return x.name;
+            // we are using x because it will reduce our cost of searching throughout the code, it will only search in current function only 
+          };
+        },
+      };
+      console.log(object.getNameFunc()()); // object
+
+      */
+var name = "The window";
+
+      var object = {
+        name: "My object",
+
+        getNameFunc: function () {
+          var that = this;
+          return function () {
+            return that.name;
+          };
+        },
+      };
+      console.log(object.getNameFunc()()); // object
+    </script>
+  </head>
+  <body></body>
+</html>

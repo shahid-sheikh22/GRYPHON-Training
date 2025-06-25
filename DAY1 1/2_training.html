@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shahid</title>
+
+    <script type="text/javascript">
+
+      // a(); // this will run even if declared before function
+
+      function a() {
+        // function declaration hoisting
+
+        console.log("Function a is executed");
+      }
+      a();
+
+      //   b(); // won't run because it is expression hoisting
+      b = function () {
+        // function expression hoisting
+
+        console.log("Function b is executed");
+      };
+      b();
+    </script>
+  </head>
+  <body></body>
+</html>

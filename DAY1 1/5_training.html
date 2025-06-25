@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shahid</title>
+    <script>
+      function f1() {
+        var x = 100;
+        // with statement is the anti pattern (bad practices)
+        with (document.location) {
+          //lexical scope
+          var x = 500; //no hoisting
+        }
+        console.log(x);
+      }
+      f1();
+    </script>
+  </head>
+  <body></body>
+</html>

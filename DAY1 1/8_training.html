@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function Person(name) {
+        // function argument is treated as private
+        this.getName = function () {
+          // this is priviledged medthos
+          return name;
+        };
+        //priviledged method lives in same scope of private entity and exposes the private entity to instances
+        this.setName = function (value) {
+          name = value;
+        };
+      }
+
+      var person = new Person("Shahid");
+
+      console.log(person.getName());
+      person.setName("Sheikh");
+      console.log(person.getName());
+    </script>
+  </head>
+  <body></body>
+</html>

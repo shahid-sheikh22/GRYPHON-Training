@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shahid</title>
+    <script type="text/javascript">
+      // var x = 100;
+
+      if (true) {
+        //non lexical scope
+        var x = 10; //hoisting
+      }
+      //conditional statement(for, while, if) are non-lexical scope
+
+      console.log(x);
+
+      function abc(x) {
+        // functions and objects are lexical scope
+        var y = 50;
+        console.log(y);
+
+      }
+      abc();
+
+
+      var s = 100;
+      s.a = 500;
+      console.log(s)
+      console.log(s.a);
+
+      obj = new Object();
+      obj.s="hii";
+      console.log(obj.s);
+    </script>
+  </head>
+  <body></body>
+</html>

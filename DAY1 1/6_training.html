@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shahid</title>
+    <script type="text/javascript">
+      function Person() {
+        this.x = 100; //this keyword make identifier as priviledge, but it is not public
+        this.y = 100;
+        var z = 200;
+      }
+      var inst1 = new Person();
+      console.log(inst1.x);
+      console.log(inst1.y);
+      console.log(inst1.z);
+
+      // console.log(x);  this will give undifined error
+    </script>
+  </head>
+  <body></body>
+</html>
